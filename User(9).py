@@ -16,8 +16,8 @@ class User:
         print(f"Hello {self.first_name} {self.last_name}")
 
 
-user = User('Sereja', 'Koroteev', 26, 182, 80)
-user_ka = User('Olya', 'Abramova', 25, 174, 64)
+user = User('albert', 'einstein', 26, 182, 80)
+user_ka = User('mary', 'kury', 25, 174, 64)
 user.describe_user()
 user.greet_user()
 user_ka.describe_user()
