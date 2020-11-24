@@ -5,6 +5,9 @@ class Restaurant:
         self.cuisine_type = cuisine_type
         self.number_served = 0
 
+    def increment_number_served(self):
+        self.number_served += 102
+
     def describe_restaurant(self):
         print(f"Restaurant name is {self.restaurant_name}.")
         print(f"Cuisine type is {self.cuisine_type}.")
@@ -19,4 +22,6 @@ restaurant_0 = Restaurant('KFC', 'Backed chicken')
 restaurant_1 = Restaurant('Mac', 'Beef')
 restaurant_2 = Restaurant('Subway', 'Sandwich')
 
+restaurant_0.served()
+restaurant_0.increment_number_served()
 restaurant_0.served()
