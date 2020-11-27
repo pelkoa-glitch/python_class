@@ -26,12 +26,24 @@ class User:
         print(f"Hello {self.first_name} {self.last_name}")
 
 
-user = User('albert', 'einstein', 26, 182, 80)
-user_ka = User('mary', 'kury', 25, 174, 64)
+class Admin(User):
+    def __init__(self, first_name, last_name, age, height, weight):
+        self.privileges = Privileges()
+        super().__init__(first_name, last_name, age, height, weight, login_attempts=0)
 
-user.increment_login_attempts()
-user.increment_login_attempts()
-user.increment_login_attempts()
-user.show_login_attempts()
-user.reset_login_attempts()
-user.show_login_attempts()
+
+class Privileges:
+    def __init__(self):
+        self.privileges = ["allowed to add messages",
+                           "allowed to delete users",
+                           "allowed to ban users"]
+
+    def show_privileges(self):
+        print("\nPrivileges:")
+        if self.privileges:
+            for privilege in self.privileges:
+                print("- " + privilege)
+
+
+albert = Admin('albert', 'einstein', 80, 165, 55)
+albert.privileges.show_privileges()
