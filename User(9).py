@@ -47,3 +47,4 @@ class Privileges:
 
 albert = Admin('albert', 'einstein', 80, 165, 55)
 albert.privileges.show_privileges()
+
